@@ -38,33 +38,40 @@
                             Binnen de Geo wereld zijn verschillende objecten beschikbaar waarmee op een kaart getekend kan worden.
                             Hierbij maken we als eerste onderscheid tussen <b>Point, LineString en Polygon</b>
                         </p>
+                    </div>
+                    <div class="ui segment">
                         <div class="ui pointing secondary menu">
-                            <a class="item" data-tab="first">Screencast</a>
-                            <a class="item" data-tab="second">Content</a>
-                            <a class="item active" data-tab="third">Activity</a>
+                            <a class="item active" data-tab="activity">Activity</a>
+                            <a class="item" data-tab="content">Content</a>
+                            <a class="item" data-tab="screencast">Screencast</a>
                         </div>
-                        <h2 class="ui dividing header">
-                            <i class="settings icon"></i>
-                            <div class="content">
-                                Opdracht: Hoe werken deze objecten
-                            </div>
-                        </h2>
                         <div class="content container">
-                        <div id="map" class="map"></div>
-                        <div class="ui form">
-                            <div class="inline field">
-                                <label>Last name</label>
-                                <select id="type">
-                                    <option value="Point">Point</option>
-                                    <option value="LineString">LineString</option>
-                                    <option value="Polygon">Polygon</option>
-                                </select>
+                            <div class="ui tab segment" data-tab="activity">
+                                <h2 class="ui dividing header">
+                                    <i class="settings icon"></i>
+                                    <div class="content">
+                                        Activity: Hoe werken deze objecten
+                                    </div>
+                                </h2>
+                                <div id="map" class="map"></div>
+                                <div class="ui form">
+                                    <div class="inline field">
+                                        <label>Last name</label>
+                                        <select id="type">
+                                            <option value="Point">Point</option>
+                                            <option value="LineString">LineString</option>
+                                            <option value="Polygon">Polygon</option>
+                                        </select>
+                                    </div>
+                                    <div class="inline field">
+                                        <label>WKT of your object</label>
+                                        <textarea id="wktgeom"></textarea>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="inline field">
-                                <label>WKT of your object</label>
-                                <textarea id="wktgeom"></textarea>
+                            <div class="ui tab segment" data-tab="content">
+                                content drop here
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -252,6 +259,10 @@
           .transition('fade down')
         ;
       })
+
+      $('.menu .item')
+          .tab()
+        ;
 
     </script>
 
