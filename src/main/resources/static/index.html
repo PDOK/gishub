@@ -127,81 +127,85 @@
                         GisHub
                     </div>
                 </h2>
-                <div class="ui inverted segment">
-                    <div class="ui inverted relaxed divided list">
-                        <div class="item">
-                            <i class="bordered left check circle outline big green icon"></i>
-                            <div class="content">
-                                <div class="header">
-                                    Geo objecten
-                                </div>
-                                <div class="description">Welke geo objecten zijn er?</div>
+                <div class="ui vertical inverted fluid accordion menu">
+                    <div class="item">
+                        <i class="bordered left check circle outline big green icon"></i>
+                        <a class="active title">
+                            <div class="header">
+                                Geo objecten
                             </div>
-                            <i class="bordered angle left big icon top aligned" style="text-align: right;"></i>
-                        </div>
-                        <div class="item dropdown-menu">
-                            <i class="bordered left circle outline big white icon"></i>
-                            <div class="content">
-                                <div class="header">
-                                    Geo formaten
-                                </div>
-                                <div class="description">Welke geo formaten zijn er?</div>
-                                <div class="item dropdown-submenu">
-                                    <div class="content">
-                                        <div class="description">
-                                            <div class="ui middle aligned bulleted selection list">
-                                                <div class="item">
-                                                    <div class="content">
-                                                        <div class="header">WKT</div>
-                                                    </div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="content">
-                                                        <div class="header">GML</div>
-                                                    </div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="content">
-                                                        <div class="header">Shape</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="description">Welke geo objecten zijn er?</div>
+                        </a>
+                        <div class="active content">
+                            <div class="ui ordered list">
+                                <a class="item" href="index.html">Punten, lijnen en polygonen</a>
                             </div>
-                            <i class="bordered right angle down big icon top aligned" style="text-align: right;"></i>
                         </div>
-                        <div class="item">
-                            <i class="bordered left circle outline big white icon"></i>
-                            <div class="content">
-                                <div class="header">
-                                    Geo webservices
-                                </div>
-                                <div class="description">Welke geo webservices zijn er?</div>
+                    </div>
+                    <div class="item">
+                        <i class="bordered left circle outline big white icon"></i>
+                        <a class="title">
+                            <div class="header">
+                                Geo formaten
                             </div>
-                            <i class="bordered angle left big icon top aligned" style="text-align: right;"></i>
-                        </div>
-                        <div class="item">
-                            <i class="bordered left circle outline big white icon"></i>
-                            <div class="content">
-                                <div class="header">
-                                    Geo tools
-                                </div>
-                                <div class="description">Welke geo tools zijn er?</div>
+                            <div class="description">Welke geo formaten zijn er?</div>
+                        </a>
+                        <div class="content">
+                            <div class="ui ordered list">
+                                <a class="item">GML</a>
+                                <a class="item">WKT</a>
+                                <a class="item">Shape</a>
                             </div>
-                            <i class="bordered angle left big icon top aligned" style="text-align: right;"></i>
                         </div>
-                        <div class="item">
-                            <i class="bordered left circle outline big white icon"></i>
-                            <div class="content">
-                                <div class="header">
-                                    Tiles
-                                </div>
-                                <div class="description">Hoe werkt een tiles berekening?</div>
+                    </div>
+                    <div class="item">
+                        <i class="bordered left circle outline big white icon"></i>
+                        <a class="title">
+                            <div class="header">
+                                Geo webservices
                             </div>
-                            <i class="bordered angle left big icon top aligned" style="text-align: right;"></i>
+                            <div class="description">Welke geo webservices zijn er?</div>
+                        </a>
+                        <div class="content">
+                            <div class="ui ordered list">
+                                <a class="item" href="geowebservices.html">WMS</a>
+                                <a class="item">WMTS</a>
+                                <a class="item">TMS</a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="item">
+                        <i class="bordered left circle outline big white icon"></i>
+                        <a class="title">
+                            <div class="header">
+                                Geo Tools
+                            </div>
+                            <div class="description">Welke geo tools zijn er?</div>
+                        </a>
+                        <div class="content">
+                            <div class="ui ordered list">
+                                <a class="item">QGIS</a>
+                                <a class="item">Geoserver</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="bordered left circle outline big white icon"></i>
+                        <a class="title">
+                            <div class="header">
+                                Geo Tiles
+                            </div>
+                            <div class="description">Hoe om te gaan met tiles?</div>
+                        </a>
+                        <div class="content">
+                            <div class="ui ordered list">
+                                <a class="item">Hoe worden tiles berekend?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                     </div>
                 </div>
             </div>
@@ -306,6 +310,10 @@
 
       $('.menu .item')
           .tab()
+        ;
+
+      $('.ui.accordion')
+          .accordion()
         ;
 
     </script>

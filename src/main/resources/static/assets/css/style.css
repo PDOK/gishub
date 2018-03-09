@@ -3,6 +3,10 @@
         widht: 100%
     }
 
+ body {
+    overflow-y: scroll
+ }
+
 @font-face {
     font-family: geo;
     src: url(assets/fonts/Geo.ttf);
@@ -12,3 +16,12 @@
     font-family: geo;
     color: white
 }
+
+.ui.accordion.menu .item .title .header {
+    font-weight: 700
+}
+
+.ui.accordion.menu .item .title .description {
+    color: rgba(255,255,255,.7)
+}
+
