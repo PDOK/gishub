@@ -273,11 +273,10 @@
           type: typeSelect.value
         });
 
-		//FIXED CODE HERE!
-		  draw.on('drawend',function(e){
-			map.removeInteraction(draw);
-			fill(e.feature)
-		  }, this)
+          draw.on('drawend',function(e){
+            map.removeInteraction(draw);
+            fill(e.feature)
+          }, this)
         map.addInteraction(draw);
         snap = new ol.interaction.Snap({source: source});
 		map.addInteraction(snap);
